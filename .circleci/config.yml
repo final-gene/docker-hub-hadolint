@@ -27,22 +27,22 @@ jobs:
 
   build-1.7:
     environment:
-      VERSION: "1.6"
+      VERSION: "1.7"
     <<: *defaults
 
   build-1.8:
     environment:
-      VERSION: "1.6"
+      VERSION: "1.8"
     <<: *defaults
 
   build-1.9:
     environment:
-      VERSION: "1.6"
+      VERSION: "1.9"
     <<: *defaults
 
   build-1.10:
     environment:
-      VERSION: "1.6"
+      VERSION: "1.10"
     <<: *defaults
 
 workflows:
