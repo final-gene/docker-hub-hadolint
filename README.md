@@ -4,11 +4,11 @@
 This is a image to run the [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint).
 
 ## Supported tags and respective Dockerfile links
-* `1.10`, `latest` [(Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.10/Dockerfile)
-* `1.9` [(Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.9/Dockerfile)
-* `1.8` [(Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.8/Dockerfile)
-* `1.7` [(Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.7/Dockerfile)
-* `1.6` [(Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.6/Dockerfile)
+* `1.10`, `latest` [(1.10/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.10/Dockerfile)
+* `1.9` [(1.9/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.9/Dockerfile)
+* `1.8` [(1.8/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.8/Dockerfile)
+* `1.7` [(1.7/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.7/Dockerfile)
+* `1.6` [(1.6/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.6/Dockerfile)
 
 ## How to use this image
 Run the `hadolint` image:
