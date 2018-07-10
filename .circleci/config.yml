@@ -12,7 +12,7 @@ defaults: &defaults
       run:
         name: Build application Docker image
         command: |
-          docker build --tag hadolint:$VERSION --file ./$VERSION/Dockerfile .
+          docker build --tag hadolint:$VERSION $VERSION/
     -
       run:
         name: List created images

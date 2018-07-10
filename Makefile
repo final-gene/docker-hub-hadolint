@@ -18,11 +18,10 @@ ${VERSIONS}:
 	@docker build \
 		--no-cache \
 		--tag finalgene/${NAME}:${@}-dev \
-		--file ./${@}/Dockerfile \
-		.
+		${@}/
 
 .PHONY: clean
 clean:
-	-docker rmi \
+	-@docker rmi \
 		--force \
 		$(shell docker images finalgene/${NAME}:*-dev -q)
