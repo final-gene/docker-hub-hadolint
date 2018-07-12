@@ -20,6 +20,8 @@ ${VERSIONS}:
 		--tag finalgene/${NAME}:${@}-dev \
 		${@}/
 
+	@docker images finalgene/${NAME}:${@}-dev
+
 .PHONY: clean
 clean:
 	-@docker rmi \
