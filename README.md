@@ -1,4 +1,4 @@
-# Coverage check
+# Haskell Dockerfile Linter
 [![CircleCI](https://circleci.com/gh/final-gene/docker-hub-hadolint/tree/master.svg?style=svg)](https://circleci.com/gh/final-gene/docker-hub-hadolint/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4cf4be3e6d6540c0a1c0d72a239ae01b)](https://www.codacy.com/app/final-gene/docker-hub-hadolint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=final-gene/docker-hub-hadolint&amp;utm_campaign=Badge_Grade)
 
 This is a image to run the [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint).
