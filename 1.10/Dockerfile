@@ -2,7 +2,7 @@ FROM alpine:3.8
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV HADOLINT_VERSION="v1.10.3"
+ENV HADOLINT_VERSION="v1.10.4"
 
 RUN apk add --no-cache --virtual .build-deps \
         curl=7.61.0-r0 \
