@@ -1,6 +1,6 @@
 NAME = hadolint
 
-VERSIONS = 1.6 1.7 1.8 1.9 1.10
+VERSIONS = 1.6 1.7 1.8 1.9 1.10 1.11
 
 .PHONY: build
 build: ${VERSIONS}
