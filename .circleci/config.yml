@@ -97,6 +97,15 @@ jobs:
       VERSION: "1.12"
     <<: *build_template
 
+  validate-1.13:
+    environment:
+      VERSION: "1.13"
+    <<: *validate_template
+  build-1.13:
+    environment:
+      VERSION: "1.13"
+    <<: *build_template
+
 workflows:
   version: 2
   build:
@@ -135,3 +144,8 @@ workflows:
       - build-1.12:
           requires:
             - validate-1.12
+
+      - validate-1.13      
+      - build-1.13:
+          requires:
+            - validate-1.13
