@@ -5,7 +5,7 @@ LABEL maintainer="frank.giesecke@final-gene.de"
 ENV HADOLINT_VERSION="v1.10.4"
 
 RUN apk add --no-cache --virtual .build-deps \
-        curl=7.61.0-r0 \
+        curl=7.61.1-r0 \
     && curl -sSLq -o /usr/local/bin/hadolint "https://github.com/hadolint/hadolint/releases/download/${HADOLINT_VERSION}/hadolint-Linux-x86_64" \
     && chmod a+x /usr/local/bin/hadolint \
     && apk del .build-deps
