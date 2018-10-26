@@ -4,7 +4,8 @@
 This is a image to run the [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint).
 
 ## Supported tags and respective Dockerfile links
-* `1.13`, `latest` [(1.13/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.12/Dockerfile)
+* `1.14`, `latest` [(1.14/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.14/Dockerfile)
+* `1.13` [(1.13/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.13/Dockerfile)
 * `1.12` [(1.12/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.12/Dockerfile)
 * `1.11` [(1.11/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.11/Dockerfile)
 * `1.10` [(1.10/Dockerfile)](https://github.com/finalgene/docker-hub-hadolint/blob/master/1.10/Dockerfile)
