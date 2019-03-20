@@ -2,7 +2,7 @@ FROM alpine:3.9
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV HADOLINT_VERSION="v1.6.6"
+ENV HADOLINT_VERSION="v1.7.5"
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache --virtual .build-deps \
