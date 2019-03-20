@@ -1,7 +1,7 @@
 version: 2
 
-.tempates:
-  .validate_template: &validate_template
+.jobs:
+  validate:
     docker:
       -
         image: finalgene/hadolint:latest
@@ -13,8 +13,9 @@ version: 2
         run:
           name: Validate Dockerfile
           command: |
-            hadolint $VERSION/Dockerfile
-  .build_template: &build_template
+            hadolint Dockerfile
+
+  build:
     docker:
       -
         image: docker:18.05.0-ce-git
@@ -26,168 +27,18 @@ version: 2
         run:
           name: Build application Docker image
           command: |
-            docker build --tag hadolint:$VERSION $VERSION/
+            docker build .
       -
         run:
           name: List created images
           command: |
             docker images
 
-jobs:
-  validate-1.6:
-    environment:
-      VERSION: "1.6"
-    <<: *validate_template
-  build-1.6:
-    environment:
-      VERSION: "1.6"
-    <<: *build_template
-
-  validate-1.7:
-    environment:
-      VERSION: "1.7"
-    <<: *validate_template
-  build-1.7:
-    environment:
-      VERSION: "1.7"
-    <<: *build_template
-
-  validate-1.8:
-    environment:
-      VERSION: "1.8"
-    <<: *validate_template
-  build-1.8:
-    environment:
-      VERSION: "1.8"
-    <<: *build_template
-
-  validate-1.9:
-    environment:
-      VERSION: "1.9"
-    <<: *validate_template
-  build-1.9:
-    environment:
-      VERSION: "1.9"
-    <<: *build_template
-
-  validate-1.10:
-    environment:
-      VERSION: "1.10"
-    <<: *validate_template
-  build-1.10:
-    environment:
-      VERSION: "1.10"
-    <<: *build_template
-
-  validate-1.11:
-    environment:
-      VERSION: "1.11"
-    <<: *validate_template
-  build-1.11:
-    environment:
-      VERSION: "1.11"
-    <<: *build_template
-
-  validate-1.12:
-    environment:
-      VERSION: "1.12"
-    <<: *validate_template
-  build-1.12:
-    environment:
-      VERSION: "1.12"
-    <<: *build_template
-
-  validate-1.13:
-    environment:
-      VERSION: "1.13"
-    <<: *validate_template
-  build-1.13:
-    environment:
-      VERSION: "1.13"
-    <<: *build_template
-
-  validate-1.14:
-    environment:
-      VERSION: "1.14"
-    <<: *validate_template
-  build-1.14:
-    environment:
-      VERSION: "1.14"
-    <<: *build_template
-
-  validate-1.15:
-    environment:
-      VERSION: "1.15"
-    <<: *validate_template
-  build-1.15:
-    environment:
-      VERSION: "1.15"
-    <<: *build_template
-
-  validate-1.16:
-    environment:
-      VERSION: "1.16"
-    <<: *validate_template
-  build-1.16:
-    environment:
-      VERSION: "1.16"
-    <<: *build_template
-
 workflows:
   version: 2
   build:
     jobs:
-      - validate-1.6
-      - build-1.6:
+      - validate
+      - build:
           requires:
-            - validate-1.6
-            
-      - validate-1.7
-      - build-1.7:
-          requires:
-            - validate-1.7
-            
-      - validate-1.8
-      - build-1.8:
-          requires:
-            - validate-1.8
-            
-      - validate-1.9
-      - build-1.9:
-          requires:
-            - validate-1.9
-
-      - validate-1.10      
-      - build-1.10:
-          requires:
-            - validate-1.10
-
-      - validate-1.11      
-      - build-1.11:
-          requires:
-            - validate-1.11
-
-      - validate-1.12      
-      - build-1.12:
-          requires:
-            - validate-1.12
-
-      - validate-1.13      
-      - build-1.13:
-          requires:
-            - validate-1.13
-
-      - validate-1.14      
-      - build-1.14:
-          requires:
-            - validate-1.14
-
-      - validate-1.15      
-      - build-1.15:
-          requires:
-            - validate-1.15
-
-      - validate-1.16      
-      - build-1.16:
-          requires:
-            - validate-1.16
+            - validate
