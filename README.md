@@ -1,6 +1,8 @@
 # Haskell Dockerfile Linter
 [![CircleCI](https://circleci.com/gh/final-gene/docker-hub-hadolint/tree/master.svg?style=svg)](https://circleci.com/gh/final-gene/docker-hub-hadolint/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a88655f816124424b0c61f7dcaa8b643)](https://www.codacy.com/app/final-gene/docker-hub-hadolint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=final-gene/docker-hub-hadolint&amp;utm_campaign=Badge_Grade)
 
+Warning: this project as been deprecated - please use [hadolint/hadolint](https://hub.docker.com/r/hadolint/hadolint) instead
+
 This is a image to run the [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint).
 
 ## How to use this image
